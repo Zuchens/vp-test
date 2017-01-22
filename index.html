@@ -25,7 +25,7 @@
 <strong>Możesz sprawdzać różne badania do momentu stwierdzenia diagnozy.</strong>
 <p>Po niej nadal możesz je zobaczyć, ale w wynikach zostaną oznaczone tylko te badania, które zaznaczyłeś przed diagnozą.</p>
 <p>Jeśli myślałeś o jakiś badaniach, których nie ma w naszym tescie albo inne uwagi to możesz je nam zapisać :)</p>
-<p><strong>Nie zapomnij o przesłaniu wyników. Po przesłaniu powinno cię przekierwać na stronę
+<p><strong>Nie zapomnij o przesłaniu wyników. Po przesłaniu powinno cię przekierować na stronę
     zatwierdzającą wysyłkę</strong></p>
 <br>
 <br>
@@ -50,7 +50,7 @@
 <p><strong>Badanie fizykalne: </strong>
     <br> Głowa: bez śladów urazu.
     <br>Liczba oddechów 18/min,
-    <br>Klatka piersiowa: osłuchowo - szmer pęcherzykowy, symetrzyczny. Serce: tony serca czyste, dobrze akcentowalne,
+    <br>Klatka piersiowa: osłuchowo - szmer pęcherzykowy, symetryczny. Serce: tony serca czyste, dobrze akcentowalne,
     <br>Brzuch miękki, niebolesny, wątroba niepowiększona
     <br>W badaniu neurologicznym bez odchyleń (w zakresie objawów oponowych i nerwów czaszkowych)
 </p>
@@ -291,6 +291,7 @@ Barwa: wodojasny
         document.getElementById('results1').onclick = function () {
 
             for (i = 1; i < 72; i++) {
+                answsers = [];
                 if(document.getElementById('q'+i).checked){
                     answsers = answsers.concat(1);
                     $("#ans"+i).show();
