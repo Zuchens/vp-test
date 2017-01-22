@@ -73,7 +73,7 @@
     <li><input type="checkbox" name="q29" value="a" id="q29"><label for="q29">Żelazo</label></li>
     <li><input type="checkbox" name="q31" value="a" id="q31"><label for="q31">TSH</label></li>
     <li><input type="checkbox" name="q34" value="a" id="q34"><label for="q34">Wapń całkowity </label></li>
-	
+
     <li><label id="ans1" style="display: none;">9 mg/l</label></li>
     <li><span id="ans3" style="display: none;">12 mm</span></li>
     <li><span id="ans5" style="display: none;">28 mg/dl</span></li>
@@ -121,20 +121,20 @@
     <li><span id="ans16" style="display: none;">30s</span></li>
     <li><span id="ans18" style="display: none;">15s</span></li>
     <li><span id="ans20" style="display: none;">2g/l</span></li>
-    <li><span id="ans24" style="display: none;">4,5 mmol/l</span></li>
-    <li><span id="ans26" style="display: none;">136 mmol/l</span></li>
-    <li><span id="ans28" style="display: none;">96 mmol/l</span></li>
-	<li><span id="ans28" style="display: none;">6,0%</span></li>
+    <li><span id="ans22" style="display: none;">4,5 mmol/l</span></li>
+    <li><span id="ans24" style="display: none;">136 mmol/l</span></li>
+    <li><span id="ans26" style="display: none;">96 mmol/l</span></li>
+    <li><span id="ans28" style="display: none;">6,0%</span></li>
     <li><span id="ans30" style="display: none;">15 pmol/l</span></li>
     <li><span id="ans32" style="display: none;">48g/l</span></li>
-	<li><span id="ans68" style="display: none;">bez odchyleń od normy</span></li>
+    <li><span id="ans68" style="display: none;">bez odchyleń od normy</span></li>
 
 
 
 
 </ul>
 <ul>
-<br>
+    <br>
     <div><input type="checkbox" name="q33" value="a" id="q33"><label for="q33">B. MORFOLOGIA</label><p id="ans33" style="display: none">
         RBC 5,2 ml/mm^3
         <br>Hb 15.2 g/dl
@@ -144,7 +144,7 @@
         <br>MCH 29.1 pg
         <br>PLT 450 tys/mm^3
         <br>WBC 12 tys/mm^3,
-        </p></div>
+    </p></div>
     <br>
     <div><input type="checkbox" name="q35" value="a" id="q35"><label for="q35">TK głowy</label><p id="ans35" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
     <div><input type="checkbox" name="q36" value="a" id="q36"><label for="q36">TK głowy z kontrastem</label><p id="ans36" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
@@ -255,14 +255,14 @@
     String.prototype.escapeDiacritics = function()
     {
         return this.replace(/ą/g, 'a').replace(/Ą/g, 'A')
-.replace(/ć/g, 'c').replace(/Ć/g, 'C')
-.replace(/ę/g, 'e').replace(/Ę/g, 'E')
-.replace(/ł/g, 'l').replace(/Ł/g, 'L')
-.replace(/ń/g, 'n').replace(/Ń/g, 'N')
-.replace(/ó/g, 'o').replace(/Ó/g, 'O')
-.replace(/ś/g, 's').replace(/Ś/g, 'S')
-.replace(/ż/g, 'z').replace(/Ż/g, 'Z')
-.replace(/ź/g, 'z').replace(/Ź/g, 'Z');
+                .replace(/ć/g, 'c').replace(/Ć/g, 'C')
+                .replace(/ę/g, 'e').replace(/Ę/g, 'E')
+                .replace(/ł/g, 'l').replace(/Ł/g, 'L')
+                .replace(/ń/g, 'n').replace(/Ń/g, 'N')
+                .replace(/ó/g, 'o').replace(/Ó/g, 'O')
+                .replace(/ś/g, 's').replace(/Ś/g, 'S')
+                .replace(/ż/g, 'z').replace(/Ż/g, 'Z')
+                .replace(/ź/g, 'z').replace(/Ź/g, 'Z');
     }
 
     var contactform =  document.getElementById('contactform');
@@ -272,28 +272,28 @@
 
         var val = ""
         var answsers = [];
-            document.getElementById('results1').onclick = function () {
+        document.getElementById('results1').onclick = function () {
 
-                for (i = 1; i < 69; i++) {
-                   if(document.getElementById('q'+i).checked){
-                       answsers = answsers.concat(1);
-                       $("#ans"+i).show();
-                       $("#ans"+i).css('visibility', 'visible')
-                   }
-                   else{
-                       answsers = answsers.concat(0);
-                   }
+            for (i = 1; i < 69; i++) {
+                if(document.getElementById('q'+i).checked){
+                    answsers = answsers.concat(1);
+                    $("#ans"+i).show();
+                    $("#ans"+i).css('visibility', 'visible')
                 }
+                else{
+                    answsers = answsers.concat(0);
+                }
+            }
         }
 
-            document.getElementById('results3').onclick = function () {
-                answsers = answsers + '\n'
-                val = val.concat(answsers)
-                $("#answer1").show();
-                var ans = $('#check').val();
-                val = val + ans + '\n'
-                $("#message").val(val)
-            }
+        document.getElementById('results3').onclick = function () {
+            answsers = answsers + '\n'
+            val = val.concat(answsers)
+            $("#answer1").show();
+            var ans = $('#check').val();
+            val = val + ans + '\n'
+            $("#message").val(val)
+        }
 
         document.getElementById('set_add').onclick = function () {
             $("#feedback").show();
