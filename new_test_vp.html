@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title></title>
+</head>
+<style>
+    ul{
+        position:relative;
+        list-style-type: none;
+    }
+    li{
+        height:20px;
+    }
+</style>
+<body>
+
+<h2>
+    Jak rozwiązywać test
+</h2>
+<p> Zaznacz badania jakie chcesz przeprowadzić i je zatwierdź</p>
+<p><strong>Staraj się nie zlecić bardzo dużej ilości niepotrzebnych badań by nie obciążyć szpitala na
+    dodatkowe koszty :)</strong>
+</p>
+
+<p>Wpisz diagnoze i ją zatwierdź, jednocześnie sprawdzając prawidłowe rozpoznanie</p>
+<p> Możesz sprawdzać różne badania do momentu stwierdzenia diagnozy. Po niej nadal możesz je zobaczyć, ale w wynikach zostaną oznaczone tylko te badania, które zaznaczyłeś przed diagnozą.</p>
+<p>Jeśli myślałeś o jakiś badaniach, których nie ma w naszym tescie albo inne uwagi to możesz je nam zapisać :)</p>
+<p><strong>Nie zapomnij o przesłaniu wyników. Po przesłaniu powinno cię przekierwać na stronę
+    zatwierdzającą wysyłkę</strong></p>
+<br>
+<br>
+<h2>Przypadek</h2>
+<p>Na SOR zgłasza się trzydziestoletni mężczyzna. Skarży się na ból głowy, który pojawił się nagle dwa dni temu. Stopniowo narastał i obecnie pacjent określa go jako "najsilniejszy w życiu". Leczył się doraźnie preparatami ibuprofenu bez wyraźnej poprawy.
+    Pielęgniarka zmierzyła podstawowe parametry życiowe chorego: RR 150/70, HR 85/min, SaO2 99%, Temp. 36,9 °C
+    Podchodzisz do krzesła na którym siedzi młody mężczyzna. Siedzi z twarzą ukrytą w rękach, a gdy się z nim witasz sprawia wrażenie cierpiącego.
+</p>
+<br>
+<p><strong>W wywiadzie:</strong>
+    <br>S:  Boli go głowa w okolicy czołowej, ból promieniuje do okolicy ciemieniowej. Jest rozlany, trudno podać jedno miejsce gdzie boli. Kręgosłup, szyja, kark nie bolą.
+    <br>Nigdy w życiu nie czuł czegoś podobnego.
+    <br>Neguje nudności, wymioty, zaburzenia świadomości, omdlenie, zaburzenia widzenia, światłowstręt, przeczulicę twarzy.
+    <br>A: Na jakiś antybiotyk, ale nie wie konkretnie na jaki.
+    <br>M: Neguje
+    <br>P: Neguje choroby przewlekłe.
+    <br>L: 3 godziny temu
+    <br>E: Ból pojawił się nagle, pacjent wracał autobusem z pracy. W ciągu kilkudziesięciu minut osiągnął maksymalne nasilenie. Uraz głowy miał pół roku temu (uderzył się w metalowy słupek, nie stracił przytomności, ale nie uważa, żeby miało to jakiś związek z obecnymi dolegliwościami)
+    <br>Od tygodnia jest przeziębiony, z nosa leje mu sie ropna wydzielnia. Bolało go gardło, ale go już nie boli. Nie kaszlał
+</p>
+
+<p><strong>Badanie fizykalne: </strong>
+    <br> Głowa: bez śladów urazu.
+    <br>Liczba oddechów 18/min,
+    <br>Klatka piersiowa: osłuchowo - szmer pęcherzykowy, symetrzyczny. Serce: tony serca czyste, dobrze akcentowalne,
+    <br>Brzuch miękki, niebolesny, wątroba niepowiększona
+    <br>W badaniu neurologicznym bez odchyleń (w zakresie objawów oponowych i nerwów czaszkowych)
+</p>
+<p><strong>Badania</strong></p>
+<ul class="answers" id="mult" style="columns: 4 ;-webkit-columns: 4; -moz-columns: 4;">
+    <li><input type="checkbox" name="q1" value="a" id="q1"><label for="q1">CRP</label></li>
+    <li><input type="checkbox" name="q3" value="a" id="q3"><label for="q3">OB</label></li>
+    <li><input type="checkbox" name="q5" value="a" id="q5"><label for="q5">mocznik</label></li>
+    <li><input type="checkbox" name="q7" value="a" id="q7"><label for="q7">kwas moczowy</label></li>
+    <li><input type="checkbox" name="q9" value="a" id="q9"><label for="q9">ASPAT</label></li>
+    <li><input type="checkbox" name="q11" value="a" id="q11"><label for="q11">ALAT</label></li>
+    <li><input type="checkbox" name="q13" value="a" id="q13"><label for="q13">bilirubina całkowita</label></li>
+    <li><input type="checkbox" name="q15" value="a" id="q15"><label for="q15">mleczan</label></li>
+    <li><input type="checkbox" name="q17" value="a" id="q17"><label for="q17">lipaza</label></li>
+    <li><input type="checkbox" name="q19" value="a" id="q19"><label for="q19">amylaza</label></li>
+    <li><input type="checkbox" name="q21" value="a" id="q21"><label for="q21">białko całkowite</label></li>
+    <li><input type="checkbox" name="q23" value="a" id="q23"><label for="q23">CK</label></li>
+    <li><input type="checkbox" name="q25" value="a" id="q25"><label for="q25">CK-MB</label></li>
+    <li><input type="checkbox" name="q27" value="a" id="q27"><label for="q27">troponiny</label></li>
+    <li><input type="checkbox" name="q29" value="a" id="q29"><label for="q29">Żelazo</label></li>
+    <li><input type="checkbox" name="q31" value="a" id="q31"><label for="q31">TSH</label></li>
+    <li><input type="checkbox" name="q34" value="a" id="q34"><label for="q34">Wapń całkowity </label></li>
+    <li><label id="ans1" style="display: none;">9 mg/l</label></li>
+    <li><span id="ans3" style="display: none;">12 mm</span></li>
+    <li><span id="ans5" style="display: none;">28 mg/dl</span></li>
+    <li><span id="ans7" style="display: none;">5mg/dl</span></li>
+    <li><span id="ans9" style="display: none;">60 U/l</span></li>
+    <li><span id="ans11" style="display: none;">80 U/l</span></li>
+    <li><span id="ans13" style="display: none;">0,5mg/dll</span></li>
+    <li><span id="ans15" style="display: none;">1 mmol/l</span></li>
+    <li><span id="ans17" style="display: none;">w normie</span></li>
+    <li><span id="ans19" style="display: none;">w normie</span></li>
+    <li><span id="ans21" style="display: none;">70g/l</span></li>
+    <li><span id="ans23" style="display: none;">w normie</span></li>
+    <li><span id="ans25" style="display: none;">w normie</span></li>
+    <li><span id="ans27" style="display: none;"> 0,05 g/l</span></li>
+    <li><span id="ans29" style="display: none;">22mol/l</span></li>
+    <li><span id="ans31" style="display: none;">1,2 mIU/l</span></li>
+    <li><span id="ans34" style="display: none;">2,1 mmol/l</span></li>
+
+    <li><input type="checkbox" name="q2" value="a" id="q2"><label for="q2">prokalcytonina</label></li>
+    <li><input type="checkbox" name="q4" value="a" id="q4"><label for="q4">glukoza</label></li>
+    <li><input type="checkbox" name="q6" value="a" id="q6"><label for="q6">kreatynina</label></li>
+    <li><input type="checkbox" name="q8" value="a" id="q8"><label for="q8">fosfataza alkalicza</label></li>
+    <li><input type="checkbox" name="q10" value="a" id="q10"><label for="q10">GGTP</label></li>
+    <li><input type="checkbox" name="q12" value="a" id="q12"><label for="q12">LDH</label></li>
+    <li><input type="checkbox" name="q14" value="a" id="q14"><label for="q14">D-dimery</label></li>
+    <li><input type="checkbox" name="q16" value="a" id="q16"><label for="q16">APTT</label></li>
+    <li><input type="checkbox" name="q18" value="a" id="q18"><label for="q18">PT</label></li>
+    <li><input type="checkbox" name="q20" value="a" id="q20"><label for="q20">fibrynogen</label></li>
+    <li><input type="checkbox" name="q22" value="a" id="q22"><label for="q22">Potas</label></li>
+    <li><input type="checkbox" name="q24" value="a" id="q24"><label for="q24">Sód</label></li>
+    <li><input type="checkbox" name="q26" value="a" id="q26"><label for="q26">Chlorki</label></li>
+    <li><input type="checkbox" name="q28" value="a" id="q28"><label for="q28">HbA1C</label></li>
+    <li><input type="checkbox" name="q30" value="a" id="q30"><label for="q30">fT4</label></li>
+    <li><input type="checkbox" name="q32" value="a" id="q32"><label for="q32">albuminy</label></li>
+    <li></li>
+
+
+    <li><span id="ans2" style="display: none;">0,1 ng/ml</span></li>
+    <li><span id="ans4" style="display: none;">5 mmol/dl</span></li>
+    <li><span id="ans6" style="display: none;">80 umol/l</span></li>
+    <li><span id="ans8" style="display: none;">w normie</span></li>
+    <li><span id="ans10" style="display: none;">w normie/l</span></li>
+    <li><span id="ans12" style="display: none;">w normie</span></li>
+    <li><span id="ans14" style="display: none;"><500 ug/l</span></li>
+    <li><span id="ans16" style="display: none;">30s</span></li>
+    <li><span id="ans18" style="display: none;">15s</span></li>
+    <li><span id="ans20" style="display: none;">2g/l</span></li>
+    <li><span id="ans22" style="display: none;"><0,05 g/l</span></li>
+    <li><span id="ans24" style="display: none;"> 4,5 mmol/l</span></li>
+    <li><span id="ans26" style="display: none;">136 mmol/l</span></li>
+    <li><span id="ans28" style="display: none;">96 mmol/l</span></li>
+    <li><span id="ans30" style="display: none;">15 pmol/l</span></li>
+    <li><span id="ans32" style="display: none;">48g/l</span></li>
+
+
+
+
+</ul>
+<ul>
+<br>
+    <div><input type="checkbox" name="q33" value="a" id="q33"><label for="q33">B. MORFOLOGIA</label><p id="ans33" style="display: none">
+        RBC 5,2 ml/mm^3
+        <br>Hb 15.2 g/dl
+        <br>Hct 44.8 %
+        <br>MCV 84.7 um
+        <br>MCHC 34.4 g/dl
+        <br>MCH 29.1 pg
+        <br>PLT 450 tys/mm^3
+        <br>WBC 12 tys/mm^3,
+        </p></div>
+    <br>
+    <div><input type="checkbox" name="q35" value="a" id="q35"><label for="q35">TK głowy</label><p id="ans35" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q36" value="a" id="q36"><label for="q36">TK głowy z kontrastem</label><p id="ans36" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q37" value="a" id="q37"><label for="q37">TK jamy brzusznej</label><p id="ans37" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q38" value="a" id="q38"><label for="q38">TK jamy brzusznej z kontrastem</label><p id="ans38" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q39" value="a" id="q39"><label for="q39">TK klatki piersiowej</label><p id="ans39" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q40" value="a" id="q40"><label for="q40">TK klatki piersiowej z kontrastem</label><p id="ans40" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q41" value="a" id="q41"><label for="q41">TK angio tt mózgowych</label><p id="ans41" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q42" value="a" id="q42"><label for="q42">TK angio naczyń klatki piersiowej</label><p id="ans42" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q43" value="a" id="q43"><label for="q43">TK miednicy</label><p id="ans43" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q44" value="a" id="q44"><label for="q44">TK miednicy z kontrastem</label><p id="ans44" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q45" value="a" id="q45"><label for="q45">TK trauma</label><p id="ans45" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+
+    <div><input type="checkbox" name="q46" value="a" id="q46"><label for="q46">RTG - czaszki </label><div id="ans46"  style="display:none"><p>zacienienia w zatokach szczękowych- płyn, zmiany o charakterze zapalnym </p><img src="RTG1.jpg"><img src="RTG2.jpg"></div></div>
+    <div><input type="checkbox" name="q47" value="a" id="q47"><label for="q47">RTG - klatki piersiowej</label><p id="ans47" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q48" value="a" id="q48"><label for="q48">RTG - jamy brzusznej</label><p id="ans48" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q49" value="a" id="q49"><label for="q49">RTG - kończyny górnej</label><p id="ans49" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q50" value="a" id="q50"><label for="q50">RTG - kończyny dolnej</label><p id="ans50" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q51" value="a" id="q51"><label for="q51">RTG - miednicy</label><p id="ans51" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q52" value="a" id="q52"><label for="q52">RTG - kręgosłupa</label><p id="ans52" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+
+    <div><input type="checkbox" name="q53" value="a" id="q53"><label for="q53">USG - FAST </label><p id="ans53" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q54" value="a" id="q54"><label for="q54">USG - tętnic szyjnych</label><p id="ans54" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q55" value="a" id="q55"><label for="q55">USG - jamy brzusznej</label><p id="ans55" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q56" value="a" id="q56"><label for="q56">USG - tarczycy</label><p id="ans56" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q57" value="a" id="q57"><label for="q57">USG - płuc</label><p id="ans57" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q58" value="a" id="q58"><label for="q58">USG - test kompresyjny kończyn dolnych</label><p id="ans58" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q59" value="a" id="q59"><label for="q59">USG - naczyń kończyny dolnej</label><p id="ans59" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q60" value="a" id="q60"><label for="q60">USG - naczyń kończyny górnej</label><p id="ans60" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+
+    <div><input type="checkbox" name="q61" value="a" id="q61"><label for="q61">badanie echokardiograficzne</label><p id="ans61" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q62" value="a" id="q62"><label for="q62">badanie per rectum</label><p id="ans62" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q63" value="a" id="q63"><label for="q63">gastroskopia</label><p id="ans63" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q64" value="a" id="q64"><label for="q64">kolonoskopia</label><p id="ans64" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
+    <div><input type="checkbox" name="q65" value="a" id="q65"><label for="q65">badanie ogólne moczu</label><div id="ans65"  style="display:none"><img src="mocz.jpg"></div></div>
+
+    <div><input type="checkbox" name="q66" value="a" id="q66"><label for="q66">EKG</label><div id="ans66"  style="display:none"><img src="ekg-casejpg.jpg"></div></div>
+
+    <div><input type="checkbox" name="q67" value="a" id="q67"><label for="q67">punkcja lędźwiowa</label><p id="ans67" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pacjent nie wyraża zgody</p></div>
+
+</ul>
+<br>
+<button id="results1">
+    Zatwierdź badania i zobacz wyniki
+</button>
+
+<br>
+<br>
+<br>
+<div>
+    Jaką wstępną diagnozę stwierdasz? Z jakim problemem zgłosił się pacjent? :<br> <input type="text" id="check" name="check" value="">
+    <button id="results3">
+        Zatwierdź diagnozę
+    </button>
+</div>
+<br>
+<br>
+<div id="answer1" style="display: none;">
+    <p>
+        Rozpoznanie: <strong>Ostre zapalenie zatok</strong><br>
+
+        <br>Kluczowym badaniem było RTG głowy. Wykonane TK głowy jest badaniem ostrodyżurowym i ogranicza się w zasadzie do mózgoczaszki.
+        <br>Technik na podstawie skierowania wybiera obszar objęty badaniem - jeśli podejrzewamy patologie OUN to badanie zakończy się na podstawie czaszki i "odetnie" nam twarzoczaszkę.
+        <br>W tym przypadku objęło jedynie zatokę czołową (bez odchyleń) oraz część małżowin nosowych (gdzie faktycznie można doszukiwać się pogrubionej błony śluzowej).
+        <br>Lekarz radiolog opisujący badanie nie zwrócił jednak na to uwagi i nie uwzględnił w opisie.
+        <br>Morał z tego taki, że każde badanie dodatkowe ma swoją czułość i swoistość a jego wyniki w dużym stopniu zależą od różnych subtelności towarzyszących jego przeprowadzeniu.
+
+</div>
+<br>
+<br>
+<div>
+    Czy zleciłbyś jakieś inne badania, a może masz jakieś uwagi do testu? Jakie? <br><input type="text" id="add" name="check" value="">
+    <button id="set_add">
+        Wyślij nam :)
+    </button>
+</div>
+
+<div id="feedback" style="display: none;">
+    <h3>Dziękujemy za informacje</h3></div>
+<br>
+<br>
+
+<h2> Nie zapomnij wysłać rozwiązań!</h2>
+
+<form id="contactform" method="POST">
+    <input type="text" name="name" placeholder="Your name" value="zuchens@interia.pl" style="display: none;">
+    <input type="email" name="_replyto" placeholder="Your email" value="zuchens@interia.pl" style="display: none;">
+    <input type="hidden" name="_subject" value="Website contact" style="display: none;" />
+    <textarea id="message" name="message" placeholder="Your message" style="display: none;"></textarea>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="submit" value="Wyślij wyniki">
+</form>
+
+
+</body>
+<script>
+    $('#add').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('#set_add').click();//Trigger search button click event
+        }
+    });
+
+    $('#check').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('#results3').click();//Trigger search button click event
+        }
+    });
+    String.prototype.escapeDiacritics = function()
+    {
+        return this.replace(/ą/g, 'a').replace(/Ą/g, 'A')
+.replace(/ć/g, 'c').replace(/Ć/g, 'C')
+.replace(/ę/g, 'e').replace(/Ę/g, 'E')
+.replace(/ł/g, 'l').replace(/Ł/g, 'L')
+.replace(/ń/g, 'n').replace(/Ń/g, 'N')
+.replace(/ó/g, 'o').replace(/Ó/g, 'O')
+.replace(/ś/g, 's').replace(/Ś/g, 'S')
+.replace(/ż/g, 'z').replace(/Ż/g, 'Z')
+.replace(/ź/g, 'z').replace(/Ź/g, 'Z');
+    }
+
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'zuchens' + '@' + 'interia' + '.' + 'pl');
+    var val = ""
+    $(document).ready(function () {
+
+        var val = ""
+        var answsers = [];
+            document.getElementById('results1').onclick = function () {
+
+                for (i = 1; i < 68; i++) {
+                   if(document.getElementById('q'+i).checked){
+                       answsers = answsers.concat(1);
+                       $("#ans"+i).show();
+                       $("#ans"+i).css('visibility', 'visible')
+                   }
+                   else{
+                       answsers = answsers.concat(0);
+                   }
+                }
+        }
+
+            document.getElementById('results3').onclick = function () {
+                answsers = answsers + '\n'
+                val = val.concat(answsers)
+                $("#answer1").show();
+                var ans = $('#check').val();
+                val = val + ans + '\n'
+                $("#message").val(val)
+            }
+
+        document.getElementById('set_add').onclick = function () {
+            $("#feedback").show();
+            var ans = $('#add').val();
+            val = val + ans + '\n'
+            $("#message").val(val)
+
+            console.log(val)
+        }
+    });
+
+
+
+</script>
+</html>
