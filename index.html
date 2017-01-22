@@ -289,9 +289,9 @@ Barwa: wodojasny
         var val = ""
         var answsers = [];
         document.getElementById('results1').onclick = function () {
-
-            for (i = 1; i < 72; i++) {
                 answsers = [];
+            for (i = 1; i < 72; i++) {
+
                 if(document.getElementById('q'+i).checked){
                     answsers = answsers.concat(1);
                     $("#ans"+i).show();
