@@ -150,7 +150,6 @@
     <div><input type="checkbox" name="q36" value="a" id="q36"><label for="q36">TK głowy z kontrastem</label><p id="ans36" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
     <div><input type="checkbox" name="q37" value="a" id="q37"><label for="q37">TK jamy brzusznej</label><p id="ans37" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
     <div><input type="checkbox" name="q38" value="a" id="q38"><label for="q38">TK jamy brzusznej z kontrastem</label><p id="ans38" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
-    <div><input type="checkbox" name="q45" value="a" id="q71"><label for="q71">TK twarzoczaszki</label><div id="ans71"  style="display:none"><img src="twarzo.jpg"></div></div>
     <div><input type="checkbox" name="q39" value="a" id="q39"><label for="q39">TK klatki piersiowej</label><p id="ans39" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
     <div><input type="checkbox" name="q40" value="a" id="q40"><label for="q40">TK klatki piersiowej z kontrastem</label><p id="ans40" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
     <div><input type="checkbox" name="q41" value="a" id="q41"><label for="q41">TK angio tt mózgowych</label><p id="ans41" style="display: inline; visibility:hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W normie</p></div>
@@ -290,7 +289,7 @@ Barwa: wodojasny
         var answsers = [];
         document.getElementById('results1').onclick = function () {
                 answsers = [];
-            for (i = 1; i < 72; i++) {
+            for (i = 1; i < 71; i++) {
 
                 if(document.getElementById('q'+i).checked){
                     answsers = answsers.concat(1);
