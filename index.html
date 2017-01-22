@@ -73,6 +73,7 @@
     <li><input type="checkbox" name="q29" value="a" id="q29"><label for="q29">Żelazo</label></li>
     <li><input type="checkbox" name="q31" value="a" id="q31"><label for="q31">TSH</label></li>
     <li><input type="checkbox" name="q34" value="a" id="q34"><label for="q34">Wapń całkowity </label></li>
+	
     <li><label id="ans1" style="display: none;">9 mg/l</label></li>
     <li><span id="ans3" style="display: none;">12 mm</span></li>
     <li><span id="ans5" style="display: none;">28 mg/dl</span></li>
@@ -86,7 +87,7 @@
     <li><span id="ans21" style="display: none;">70g/l</span></li>
     <li><span id="ans23" style="display: none;">w normie</span></li>
     <li><span id="ans25" style="display: none;">w normie</span></li>
-    <li><span id="ans27" style="display: none;"> 0,05 g/l</span></li>
+    <li><span id="ans27" style="display: none;">0,05 g/l</span></li>
     <li><span id="ans29" style="display: none;">22mol/l</span></li>
     <li><span id="ans31" style="display: none;">1,2 mIU/l</span></li>
     <li><span id="ans34" style="display: none;">2,1 mmol/l</span></li>
@@ -107,7 +108,7 @@
     <li><input type="checkbox" name="q28" value="a" id="q28"><label for="q28">HbA1C</label></li>
     <li><input type="checkbox" name="q30" value="a" id="q30"><label for="q30">fT4</label></li>
     <li><input type="checkbox" name="q32" value="a" id="q32"><label for="q32">albuminy</label></li>
-    <li></li>
+    <li><input type="checkbox" name="q68" value="a" id="q68"><label for="q68">lipidogram</label></li>
 
 
     <li><span id="ans2" style="display: none;">0,1 ng/ml</span></li>
@@ -120,12 +121,13 @@
     <li><span id="ans16" style="display: none;">30s</span></li>
     <li><span id="ans18" style="display: none;">15s</span></li>
     <li><span id="ans20" style="display: none;">2g/l</span></li>
-    <li><span id="ans22" style="display: none;"><0,05 g/l</span></li>
-    <li><span id="ans24" style="display: none;"> 4,5 mmol/l</span></li>
+    <li><span id="ans24" style="display: none;">4,5 mmol/l</span></li>
     <li><span id="ans26" style="display: none;">136 mmol/l</span></li>
     <li><span id="ans28" style="display: none;">96 mmol/l</span></li>
+	<li><span id="ans28" style="display: none;">6,0%</span></li>
     <li><span id="ans30" style="display: none;">15 pmol/l</span></li>
     <li><span id="ans32" style="display: none;">48g/l</span></li>
+	<li><span id="ans32" style="display: none;">bez odchyleń od normy</span></li>
 
 
 
@@ -272,7 +274,7 @@
         var answsers = [];
             document.getElementById('results1').onclick = function () {
 
-                for (i = 1; i < 68; i++) {
+                for (i = 1; i < 69; i++) {
                    if(document.getElementById('q'+i).checked){
                        answsers = answsers.concat(1);
                        $("#ans"+i).show();
